@@ -3,29 +3,6 @@ Solution using Mixed Radix Notation
 https://www.csee.umbc.edu/~lomonaco/s08/441/handouts/Garner-Alg-Example.pdf
 
 
-EXPLANATION:
-Consider following system
-
-x = r1 mod m1
-x = r2 mod m2
-x = r3 mod m3
-
-Mixed Radix Representation will be
-
-x = v1 + v2*m1 + v3*m1*m2
-
-mods_product = []
-mods_product[0] = 1
-for i in range(0,num_of_mods):
-    mods_product[i+1] = mods_product[i]*mods{i}
-
-
-prev_v = 0
-for i in range(num_of_equations):
-    new_v = 1
-    while((prev_v+new_v*mods_product[i]) % mods[i] != remainders[i]):
-        new_v++
-
 */
 
 const solve_cong_sys = (remainders, mods) => {

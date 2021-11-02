@@ -1,20 +1,4 @@
-/*
-Using method discussed here: https://www.youtube.com/watch?v=zIFehsBHB8o
- 
 
-
-Explanation:
-
-receive system of congruence equations as two arrays, one of remainder and other mods
-
-remainder_array, mods_array
-- find product of all mods in mods_array, call it n
-- find weighted_mods, weighted_mods[i] = n/mods_array[i] 
-- find multiplicative modulo inverse of weighted_mods[i] wrt mods_array[i], inverse_mods_array
-
-find x = weighted_mods[i]*inverse_mods[i]*remainder_array[i], i=0-lenght_of_array
-return x % n
-*/
 
 const solve_cong_sys = (remainder_array, mods_array) => {
   // find product of mods
